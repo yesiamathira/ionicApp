@@ -7,28 +7,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./customer.component.scss'],
 })
 export class CustomerComponent implements OnInit {
+  public items: Array<{ 
+    title: string; 
+    note: string; 
+    icon: string 
+  }> = [];
 
   private selectedItem: any;
   private icons = [
-    'person',
+    'people',
     'person-add',
   ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor(private router : Router) {
-      this.items.push({
-        title: 'List ',
-        note: '/list-customers',
+  constructor(private router: Router) { 
+    this.items.push({
+  		title: 'List',
+        note:'/listcustomer',
         icon: this.icons[0]
-      });
-      this.items.push({
-        title: 'Add',
-        note: '/add-customers',
-        icon: this.icons[1]
-      });
+  	});
+  	this.items.push({
+  		title: 'Add',
+  		note:'/addcustomer',
+      icon: this.icons[1]
+  	});
   }
-
-  ngOnInit() {}
-  onUrl(item){
+  openUrl(item){
     this.router.navigate([item.note]);
   }
+  ngOnInit() {}
+
 }

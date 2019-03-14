@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+    <ion-title>
+      Edit Customer
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating" >Name
+    </ion-label>
+    <ion-input  name="name" [(ngModel)]="customer.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input  name="email" [(ngModel)]="customer.email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input  name="phone" [(ngModel)]="customer.phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input  name="address" [(ngModel)]="customer.address"></ion-input>
+    </ion-item>
+<ion-button expand="block" color="primary" (click)="addUpdateCustomer(customer)">Edit Customer</ion-button>
+</ion-content>

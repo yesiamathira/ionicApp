@@ -1,21 +1,18 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-button slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-button>
-      <ion-title style="text-align:center">
-       List Customers
+  <ion-toolbar>
+      <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>
+          Customer
       </ion-title>
-    </ion-toolbar>
+  </ion-toolbar>
   </ion-header>
-<ion-content>
-    <ion-list>
-        <ion-item *ngFor="let item of items" (click)="onUrl(item)">
-          <ion-icon [name]="item.icon" slot="start"></ion-icon>
+  <ion-content>
+      <ion-list>
+          <ion-item *ngFor="let item of items" (click) = "openUrl(item)">
+          <ion-icon [name]="item.icon" slot="start" ></ion-icon>
           {{item.title}}
-          <!-- <div class="item-note" slot="end">
-            {{item.note}}
-          </div> -->
-        </ion-item>
+          </ion-item>
       </ion-list>
-</ion-content>
+  </ion-content>

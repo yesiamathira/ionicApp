@@ -6,22 +6,35 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { AppComponent } from './app.component';
+
 import { LoginComponent } from './login/login.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { ListCustomersComponent } from './list-customers/list-customers.component';
-import { AddCustomersComponent } from './add-customers/add-customers.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
 import { CustomerComponent } from './customer/customer.component';
-import { EditCustomerComponent } from './edit/edit.component';
+import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { ListcustomerComponent } from './listcustomer/listcustomer.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { EditcustomerComponent } from './editcustomer/editcustomer.component';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from "@angular/forms";
+
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent, AboutusComponent,
-    ListCustomersComponent,AddCustomersComponent, CustomerComponent, EditCustomerComponent  ],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    CustomerComponent,
+    AddcustomerComponent,
+    ListcustomerComponent,
+    AboutusComponent,
+  
+    EditcustomerComponent,
+    
+  ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
   providers: [
     StatusBar,
     SplashScreen,
